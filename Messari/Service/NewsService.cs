@@ -26,7 +26,7 @@ namespace Messari.Service
         ValueTask<MessariResponse<IEnumerable<NewsResponse>>> GetAssetNewsAsync(
             string assetKey,
             int page = 1,
-            bool useMarkdown = false
+            bool asMarkdown = false
         );
     }
 
