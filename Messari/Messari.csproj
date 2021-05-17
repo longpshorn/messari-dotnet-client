@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Patrick Smith</Authors>
+    <Product>Messari .NET Client</Product>
+    <PackageId>messari-dotnet-client</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/longpshorn/messari-dotnet-client</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>C# Messari Crypto Blockchain</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Description>Messari .NET Client is a .NET Library for the Messari API to interact with the Messari.io platform to get market data, asset information, and news for crypto assets.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Polly" Version="7.2.2" />
+  </ItemGroup>
+
+</Project>
