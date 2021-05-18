@@ -82,7 +82,7 @@ namespace Messari.Service
             qsb.Add("columns", columns);
             qsb.Add("order", order.GetDescription());
             qsb.Add("format", format.GetDescription());
-            qsb.Add("timestamp_format", timestampFormat.GetDescription());
+            qsb.Add("timestamp-format", timestampFormat.GetDescription());
             return await _executor.ExecuteAsync<TimeSeriesMarketResponse>(urlPattern, qsb).ConfigureAwait(false);
         }
     }

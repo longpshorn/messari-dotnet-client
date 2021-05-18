@@ -115,7 +115,7 @@ namespace Messari.Service
         {
             var urlPattern = $"v2/assets/{assetKey}/profile";
             var qsb = new QueryStringBuilder();
-            qsb.Add("as_markdown", asMarkdown);
+            qsb.Add("as-markdown", asMarkdown);
             return await _executor.ExecuteAsync<AssetResponse>(urlPattern, qsb).ConfigureAwait(false);
         }
 
@@ -157,7 +157,7 @@ namespace Messari.Service
             qsb.Add("columns", columns);
             qsb.Add("order", order.GetDescription());
             qsb.Add("format", format.GetDescription());
-            qsb.Add("timestamp_format", timestampFormat.GetDescription());
+            qsb.Add("timestamp-format", timestampFormat.GetDescription());
             return await _executor.ExecuteAsync<TimeSeriesAssetResponse>(urlPattern, qsb).ConfigureAwait(false);
         }
     }

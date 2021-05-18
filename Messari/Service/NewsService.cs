@@ -44,7 +44,7 @@ namespace Messari.Service
             const string urlPattern = "v1/news";
             var qsb = new QueryStringBuilder();
             qsb.Add("page", page);
-            qsb.Add("as_markdown", asMarkdown);
+            qsb.Add("as-markdown", asMarkdown);
             return await _executor.ExecuteAsync<IEnumerable<NewsResponse>>(urlPattern, qsb).ConfigureAwait(false);
         }
 
@@ -57,7 +57,7 @@ namespace Messari.Service
             var urlPattern = $"v1/news/{assetKey}";
             var qsb = new QueryStringBuilder();
             qsb.Add("page", page);
-            qsb.Add("as_markdown", asMarkdown);
+            qsb.Add("as-markdown", asMarkdown);
             return await _executor.ExecuteAsync<IEnumerable<NewsResponse>>(urlPattern, qsb).ConfigureAwait(false);
         }
     }
