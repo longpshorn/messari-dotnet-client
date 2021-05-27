@@ -18,7 +18,13 @@ namespace Messari.Service
         /// <param name="sort"></param>
         /// <param name="limit"></param>
         /// <returns></returns>
-        ValueTask<MessariResponse<IEnumerable<AssetResponse>>> GetAllAssetsAsync(int page = 1, string sort = "id", int limit = 20);
+        ValueTask<MessariResponse<IEnumerable<AssetResponse>>> GetAllAssetsAsync(
+            int page = 1,
+            string sort = "id",
+            int limit = 20,
+            bool withMetrics = false,
+            bool withProfiles = false
+        );
 
         /// <summary>
         /// Get basic metadata for an asset.
@@ -95,13 +101,21 @@ namespace Messari.Service
             _executor = executor;
         }
 
-        public async ValueTask<MessariResponse<IEnumerable<AssetResponse>>> GetAllAssetsAsync(int page = 1, string sort = "id", int limit = 20)
+        public async ValueTask<MessariResponse<IEnumerable<AssetResponse>>> GetAllAssetsAsync(
+            int page = 1,
+            string sort = "id",
+            int limit = 20,
+            bool withMetrics = false,
+            bool withProfiles = false
+        )
         {
             const string urlPattern = "v2/assets";
             var qsb = new QueryStringBuilder();
             qsb.Add("page", page);
             qsb.Add("sort", sort);
             qsb.Add("limit", limit);
+            if (withMetrics) qsb.Add("with-metrics", true);
+            if (withProfiles) qsb.Add("with-profiles", true);
             return await _executor.ExecuteAsync<IEnumerable<AssetResponse>>(urlPattern, qsb).ConfigureAwait(false);
         }
 
