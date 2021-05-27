@@ -13,8 +13,8 @@
     <PackageTags>C# Messari Crypto Blockchain</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <Description>Messari .NET Client is a .NET Library for the Messari API to interact with the Messari.io platform to get market data, asset information, and news for crypto assets.</Description>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
