@@ -7,7 +7,7 @@ namespace Messari.Models.Response.Assets
         [JsonProperty("regulatory_details")]
         public string RegulatoryDetails { get; set; }
         [JsonProperty("sfar_score")]
-        public int SfarScore { get; set; }
+        public double SfarScore { get; set; }
         [JsonProperty("sfar_summary")]
         public string SfarSummary { get; set; }
     }
