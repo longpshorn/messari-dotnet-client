@@ -12,7 +12,7 @@ namespace Messari.Models.Response.Assets
         [JsonProperty("precise_consensus_mechanism")] 
         public string PreciseConsensusMechanism { get; set; }
         [JsonProperty("targeted_block_time")] 
-        public int TargetedBlockTime { get; set; }
+        public double TargetedBlockTime { get; set; }
         [JsonProperty("block_reward")] 
         public double BlockReward { get; set; }
         [JsonProperty("mining_algorithm")] 
